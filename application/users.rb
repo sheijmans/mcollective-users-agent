@@ -52,11 +52,12 @@ The ACTION can be one of the following:
         sender = node[:sender]
         data = node[:data]
 
-        if data[:exitcode] == 1
-          found = "not found!"
-        else
-          found = data[:output]
+        found = data[:output]
+        if found != '' and data[:exitcode] == 0
           printf("%-40s:\n", sender)
+          if action == 'who'
+            printf("USER     TTY      FROM              LOGIN@   IDLE   JCPU   PCPU WHAT\n")
+          end
           printf("%-80s\n\n", found)
         end
 

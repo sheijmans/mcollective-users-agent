@@ -2,7 +2,7 @@ metadata    :name        => "users",
             :description => "MCollective Agent to display users on systems",
             :author      => "S. Heijmans",
             :license     => "ASL2",
-            :version     => "0.0.1",
+            :version     => "1.0.1",
             :url         => "https://github.com/sheijmans/mcollective-users-agent",
             :timeout     => 5
 
